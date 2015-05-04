@@ -1,5 +1,7 @@
 <?php
 
+header('Content-Type: text/text');
+
 require './Formulaire.php';
 use formulaire\php\Formulaire;
 
@@ -26,6 +28,8 @@ if (isset($_POST['formID']) && isset($_POST['mode'])) {
 		elseif ($_POST['mode'] == 'update') {
 			$status = $form->update($_POST['values']);
 		}
+		
+		echo "Resultat : " . $status;
 	}else{
 		throw new Exception();
 	}

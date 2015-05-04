@@ -28,7 +28,7 @@ use formulaire\php\Formulaire;
 			<h1 style="text-align: center;">Formulaire de test</h1><br />
 			<?php
 			$form = new Formulaire();
-			$form->init("localhost","mysql","formulaire","etudiant","root","admin");
+			$form->init("localhost","mysql","formulaire","etudiant","root","lucky137");
 			$form->addField("prenom","Prénom");
 			$form->addField("nom","Nom");
 			$form->addField("datenaiss","Date de naissance");
