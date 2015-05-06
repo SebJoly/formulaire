@@ -8,7 +8,7 @@ use formulaire\php\Formulaire;
 $currentTime = time();
 if($dossier = opendir('../temp')) {
 	while(false !== ($fichier = readdir($dossier))) {
-		if (($currentTime-$fichier > 24*3600) && $fichier-0 != $_POST['formID']) {
+		if (($currentTime-$fichier > 24*3600) && $fichier-0 != $_POST['formID'] && !is_dir($fichier)) {
 			unlink('../temp/' . $fichier);
 		}
 	}

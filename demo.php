@@ -28,7 +28,7 @@ use formulaire\php\Formulaire;
 			<h1 style="text-align: center;">Formulaire de test</h1><br />
 			<?php
 			$form = new Formulaire();
-			$form->init("localhost","mysql","formulaire","etudiant","root","lucky137");
+			$form->init("localhost","mysql","formulaire","etudiant","root","admin");
 			$form->addField("prenom","Prénom");
 			$form->addField("nom","Nom");
 			$form->addField("datenaiss","Date de naissance");
@@ -37,8 +37,8 @@ use formulaire\php\Formulaire;
 			$form->setRequired("age",false);
 			$form->addField("alternant","Alternance ?");
 			$form->addField("commentaire","Commentaire");
-			//$form->loadValuesFromIndex("id","2");
-			//$form->isUpdateForm("id","2");
+			//$form->loadValuesFromIndex("id","22");
+			//$form->isUpdateForm("id","22");
 			$form->show();
 			?>
 		</div>

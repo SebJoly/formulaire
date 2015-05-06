@@ -69,10 +69,10 @@ class Field {
 			$html = '<input type="text" class="form-control field datepicker" id="'.$this->name.'" value="'.$this->defaultValue.'" '.$this->showOptions().'/>';
 		// BOOLEAN
 		}elseif (stristr($this->type,"boolean") || stristr($this->type,"tinyint")) {
-			if ($this->defaultValue === true) {
+			if ($this->defaultValue === true || $this->defaultValue == 1) {
 				$html = '<label class="radio-inline"><input type="radio" class="field" name="'.$this->name.'" id="'.$this->name.'" value="true" checked />Oui</label>';
 				$html .= '<label class="radio-inline"><input type="radio" class="field" name="'.$this->name.'" id="'.$this->name.'" value="false" />Non</label>';
-			}elseif ($this->defaultValue === false) {
+			}elseif ($this->defaultValue === false || $this->defaultValue == 0) {
 				$html = '<label class="radio-inline"><input type="radio" class="field" name="'.$this->name.'" id="'.$this->name.'" value="true" />Oui</label>';
 				$html .= '<label class="radio-inline"><input type="radio" class="field" name="'.$this->name.'" id="'.$this->name.'" value="false" checked />Non</label>';
 			}else{

@@ -34,17 +34,9 @@ field.php
 	showInput, ajout d'une class 'field' pour tout les field
 	showInput, ajout d'un 'c' manquant a 'checked' dans le else du type boolean
 	showInput, ajout d'un '/' a la fin des balise input pour bien être parsé par les parser html (ex: http://codebeautify.org/htmlviewer/)
+	showInput, ajout de || $this->defaultValue == 1 et pareil avec 0, pour les boolean de mysql
 
 script.php
 	ajout du cas 'update'
+	ajout de && !is_dir($fichier) pour ne pas passer sur /temp/. et /temp/.. quand on liste les fichiers
 
-
-A ETUDIER ************
-
-On fait quoi quand on recup un boolean qui est a NULL ? On met la checkbox a quoi ?
-
-
-
-PROBLEME CRITIQUE (REGLEE) ********
-Text fout la merde car traité differement. Problème dans ordre des values des fields insert/update different de l'ordre des fields (en gros si y'a des field simple après un text dans le formulaire bah ça fait boom)
-=> Faut traiter tout les fields en même temps dans le formulaire.js OU passer les noms des champs aussi ?

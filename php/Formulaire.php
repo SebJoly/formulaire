@@ -430,14 +430,11 @@ class Formulaire {
 
 		$req = $this->connect->query($request);
 		
-// 		if ($req->rowCount() == 0)
-		
 		$row = $req->fetch();
 		
 		foreach ($this->fieldList as $field) {
 			$this->getField($field->name)->defaultValue = $row[$field->name];
-		}
-		
+		}	
 	}
 	
 	public function isUpdateForm($id_column, $id_value) {
